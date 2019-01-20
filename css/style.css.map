@@ -1,7 +1,1 @@
-{
-"version": 3,
-"mappings": "",
-"sources": [],
-"names": [],
-"file": "style.css"
-}
+{"version":3,"sourceRoot":"","sources":["../scss/style.scss","../scss/_colors.scss"],"names":[],"mappings":"AACQ;AAER;AAAA;AAAA;AAAA;AAIA;EACE;EACA;EACA;EACA;;;AAEF;AACA;EACI,kBCXgB;EDYhB,OCdU;EDeZ;EACA;EACA;EACA;EACI;EACI;EACR;EACA;EACI;EACI","file":"style.css"}

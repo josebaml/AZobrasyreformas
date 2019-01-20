@@ -1,0 +1,30 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300|Roboto:500');
+@import 'colors.scss';
+/*
+font-family: 'Roboto', sans-serif;
+font-family: 'Montserrat', sans-serif;
+*/
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 1.188em;
+  letter-spacing: 1.5px; 
+}
+/***** Hero section *****/
+.hero{
+    background-color: $color_gris_oscuro;
+    color: $color_texto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    /*
+    -webkit-box-pack: space-between;
+        -ms-flex-pack: space-between;
+          justify-content: space-between;
+    align-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+          align-items: center;
+
+}
