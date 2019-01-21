@@ -1,0 +1,3 @@
+git remote add origin https://github.com/josebaml/AZobrasyreformas.git
+
+git push -u origin master
