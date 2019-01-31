@@ -13,11 +13,10 @@ body {
 }
 /***** Hero section *****/
 .hero{
-    background-color: $color_gris_oscuro;
-    color: $color_texto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    flex-direction: column;
     /*
     -webkit-box-pack: space-between;
         -ms-flex-pack: space-between;
@@ -26,5 +25,15 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
           align-items: center;
-
+*/
+  &__telephone{
+    background: url("../images/icono_telephone_3.svg") no-repeat left;
+    background-size: 1.3em;
+    background-color: $color_gris_oscuro;
+    color: $color_texto;
+    font-size: .7em;
+    padding-right: 1em;
+    padding: 1em 0;
+    text-align: right;
+  }
 }

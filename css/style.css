@@ -1,3 +1,37 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300|Roboto:500");
+/*
+font-family: 'Roboto', sans-serif;
+font-family: 'Montserrat', sans-serif;
+*/
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 1.188em;
+  letter-spacing: 1.5px; }
 
+/***** Hero section *****/
+.hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+    /*
+    -webkit-box-pack: space-between;
+        -ms-flex-pack: space-between;
+          justify-content: space-between;
+    align-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+          align-items: center;
+*/ }
+  .hero__telephone {
+    background: url("../images/icono_telephone_3.svg") no-repeat left;
+    background-size: 1.3em;
+    background-color: #EFEFEF;
+    color: #767676;
+    font-size: .7em;
+    padding-right: 1em;
+    padding: 1em 0;
+    text-align: right; }
 
 /*# sourceMappingURL=style.css.map */
