@@ -10,9 +10,3 @@ Gris_oscuro -> #EFEFEF
 Gris_claro -> #F7F7F7
 Letra -> #767676
 
-Webs:
-https://www.templatemonster.com/es/demo/66342.html
-http://quanticalabs.com/wp_themes/renovate/
-https://www.templatemonster.com/demo/52524.html
-https://www.templatemonster.com/demo/55108.html
-

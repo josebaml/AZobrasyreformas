@@ -172,9 +172,9 @@ body {
   .hero__ul {
     margin-right: 2.5em; }
   .hero__li {
-    padding: 0 1em; }
+    padding: .5em 1em; }
   .hero__a {
-    padding: 0 .5em;
+    padding: .3em .5em;
     transition: color .3s ease-in-out; } }
 
 /*# sourceMappingURL=style.css.map */
