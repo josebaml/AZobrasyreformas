@@ -9,8 +9,20 @@
         <title>AZobrasyreformas</title>
         <meta name="description" content="AZobrasyreformas">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/style.css"> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+        $(document).ready(function() {
+            /* CLick BTN (Open and Close) */
+            $('.hero__button_nav--toggle').on('click', function(e) {
+                e.preventDefault();
+		        $(this).toggleClass('active');
+                $('.sidenav').toggleClass('sidenav__in');
+                $('body').toggleClass('over_hidden');
+	        });
+        });
+        </script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -23,15 +35,34 @@
                         <a class="hero__number_tel" href="tel:600123456">624848612</a>
                     </div>
                     <nav class="hero__nav">
-                        <h1 class="hero__logo">Logo AZ</h1>
+                        <h1 class="hero__logo">AZ</h1>
                         <ul class="hero__ul">
                             <li class="hero__li"><a href="#hero" class="hero__a">Inicio</a></li>
                             <li class="hero__li"><a href="#services" class="hero__a">Servicios</a></li>
                             <li class="hero__li"><a href="#jobs" class="hero__a">Trabajos</a></li>
                         </ul>
+
+                        <!-- Menu Open & Close -->
+                        <a href="#" class="hero__button_nav--toggle">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </a>
                     </nav>
+                    <!-- Sidenav  -->
+                    <div class="sidenav">
+                        <nav class="sidenav__wrap">
+                            <ul class="sidenav__ul">
+                                <li class="sidenav__li"><a href="#" class="sidenav__a">Inicio</a></li>
+                                <li class="sidenav__li"><a href="#" class="sidenav__a">Servicios</a></li>
+                                <li class="sidenav__li"><a href="#" class="sidenav__a">Trabajos</a></li>
+                            </ul>
+                        </nav>
+                    </div>
                 </header>
+                
             </section>
+            <!--
             <section class="services">
                 <h1 class="services__title">Servicios</h1>
                 <article class="services_article">
@@ -43,6 +74,7 @@
             <section class="jobs">
                     <h1 class="jobs__title">Trabajos</h1>
             </section>
+        -->
         </main>
         
         <script src="" async defer>
