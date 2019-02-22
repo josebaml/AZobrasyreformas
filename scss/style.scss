@@ -39,8 +39,8 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 1.5em;
     //font-weight: 900;
-    margin-right: 1em;
-    padding-left: 1.5em;
+    margin-right: 2em;
+    padding-left: 1.3em;
     transition: color .3s ease-in-out;
     &:hover{
       color: $color_verde;
@@ -169,7 +169,7 @@ body {
   }
   &__li{
     border-bottom: 2px solid $color_verde;
-    margin: .3em 1em;
+    margin: .3em 1.6em;
   }
   &__a {
     color: $color_texto;
@@ -184,22 +184,34 @@ body {
 
 /**** Media Queries *****/
 @media screen and (min-width:600px) {
-  .hero__button_nav--toggle{
-    display: none;
+  .hero{
+    &__number_tel{
+      margin-right: 2.1em;
+    }
+    &__logo{
+      margin-left: 2em;
+    }
+    &__button_nav--toggle{
+      display: none;
+    }
+    &__ul{
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      margin-right: 1em;
+    }
   }
   .sidenav{
     display: none;
-  }
-  .hero__ul{
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
+  } 
 }
 @media screen and (min-width:800px) {
   .hero{
+    &__number_tel{
+      margin-right: 4.5em;
+    }
     &__logo{
-      margin-left: 2.5em;
+      margin-left: 4.5em;
     }
     &__ul{
       margin-right: 2.5em;

@@ -36,8 +36,8 @@ body {
     display: inline-block;
     font-family: 'Roboto', sans-serif;
     font-size: 1.5em;
-    margin-right: 1em;
-    padding-left: 1.5em;
+    margin-right: 2em;
+    padding-left: 1.3em;
     transition: color .3s ease-in-out; }
     .hero__number_tel:hover {
       color: #8dba41; }
@@ -145,7 +145,7 @@ body {
     margin-right: .5em; }
   .sidenav__li {
     border-bottom: 2px solid #8dba41;
-    margin: .3em 1em; }
+    margin: .3em 1.6em; }
   .sidenav__a {
     color: #767676;
     display: block;
@@ -156,19 +156,25 @@ body {
 
 /**** Media Queries *****/
 @media screen and (min-width: 600px) {
+  .hero__number_tel {
+    margin-right: 2.1em; }
+  .hero__logo {
+    margin-left: 2em; }
   .hero__button_nav--toggle {
     display: none; }
-
-  .sidenav {
-    display: none; }
-
   .hero__ul {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex; } }
+    display: flex;
+    margin-right: 1em; }
+
+  .sidenav {
+    display: none; } }
 @media screen and (min-width: 800px) {
+  .hero__number_tel {
+    margin-right: 4.5em; }
   .hero__logo {
-    margin-left: 2.5em; }
+    margin-left: 4.5em; }
   .hero__ul {
     margin-right: 2.5em; }
   .hero__li {
