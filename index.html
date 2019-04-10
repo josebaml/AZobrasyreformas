@@ -10,8 +10,10 @@
         <meta name="description" content="AZobrasyreformas">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/reset.css">
-        <link rel="stylesheet" href="css/style.css"> 
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/lightbox.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="js/lightbox-plus-jquery.min.js"></script>
         <script>
         $(document).ready(function() {
             /* CLick BTN (Open and Close) */
@@ -21,6 +23,22 @@
                 $('.sidenav').toggleClass('sidenav__in');
                 $('body').toggleClass('over_hidden');
 	        });
+            /* Header Menú */
+            $('.hero__a').click(function(e){     
+                e.preventDefault();   //evitar el eventos del enlace normal
+                var strAncla=$(this).attr('href'); //id del ancla
+                $('body,html').stop(true,true).animate({        
+                scrollTop: $(strAncla).offset().top
+                },1000);
+            });
+            /* Logo */
+            $('.header__logo > a').click(function(e){       
+                e.preventDefault();   //evitar el eventos del enlace normal
+                var strAncla=$(this).attr('href'); //id del ancla
+                $('body,html').stop(true,true).animate({        
+                scrollTop: $(strAncla).offset().top
+                },1000);
+            });
         });
         </script>
     </head>
@@ -28,14 +46,14 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <main>  
-            <section class="hero">
+        <main>
+            <section class="hero" id="hero">
                 <header class="hero__header">
                         <div class="hero__telephone">
                             <a class="hero__number_tel" href="tel:600123456">624848612</a>
                         </div>
                         <nav class="hero__nav">
-                            <h1 class="hero__logo">AZ</h1>
+                            <h1 class="hero__logo"><a href="#hero">AZ</a></h1>
                             <ul class="hero__ul">
                                 <li class="hero__li"><a href="#hero" class="hero__a">Inicio</a></li>
                                 <li class="hero__li"><a href="#services" class="hero__a">Servicios</a></li>
@@ -61,15 +79,23 @@
                 </header>
                 
             </section>
-            <section class="services">
+            <section class="services" id="services">
                 <h1 class="services__title">Servicios</h1>
+                <p class="services__first_text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Nam sollicitudin tempus suscipit. 
+                        Morbi vitae lectus eu massa imperdiet mollis in vel tortor. 
+                        Nullam nec luctus neque. Duis egestas dui et risus pretium, 
+                        ut luctus est dignissim. Aliquam sed mi est. Etiam pellentesque vulputate 
+                        nunc. 
+                    </p>
                 <div class="services__container">
                     <article class="services__article">
                         <img src="images/smallReforms.jpg" alt="Pequeñas reformas" class="services__img"/>
                         <div class="services__info">
                             <header class="services__header">Pequeñas reformas</header>
                             <p class="services__text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit doloribus eaque harum perspiciatis corrupti ipsa minus alias nulla, illum laudantium.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean luctus nunc in sem fermentum, ac vulputate dui maximus. Etiam a eros placerat, cursus erat ut, imperdiet erat. Suspendisse tincidunt sit amet quam pharetra porttitor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas vel odio nibh. Suspendisse nec facilisis risus. Donec id pulvinar neque.
                             </p>
                         </div>
                     </article>
@@ -78,7 +104,7 @@
                         <div class="services__info">
                             <header class="services__header">Reformas integrales</header>
                             <p class="services__text">
-                                Nuestras reformas integrales de viviendas destacan por un estudio previo que contempla todas las posibilidades, el buen gusto, la extrema dedicación a los detalles y los acabados únicos y con marcada personalidad.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean luctus nunc in sem fermentum, ac vulputate dui maximus. Etiam a eros placerat, cursus erat ut, imperdiet erat. Suspendisse tincidunt sit amet quam pharetra porttitor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas vel odio nibh. Suspendisse nec facilisis risus. Donec id pulvinar neque.
                             </p>
                         </div>
                     </article>
@@ -87,7 +113,7 @@
                         <div class="services__info">
                             <header class="services__header">Rehabilitaciones</header>
                             <p class="services__text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum cum architecto tempora voluptate laborum iure? Necessitatibus, eos deserunt.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean luctus nunc in sem fermentum, ac vulputate dui maximus. Etiam a eros placerat, cursus erat ut, imperdiet erat. Suspendisse tincidunt sit amet quam pharetra porttitor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas vel odio nibh. Suspendisse nec facilisis risus. Donec id pulvinar neque.
                             </p>
                         </div>
                     </article>
@@ -96,20 +122,118 @@
                         <div class="services__info">
                             <header class="services__header">Coordinación de Gremios</header>
                             <p class="services__text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum cum architecto tempora voluptate laborum iure? Necessitatibus, eos deserunt. 
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean luctus nunc in sem fermentum, ac vulputate dui maximus. Etiam a eros placerat, cursus erat ut, imperdiet erat. Suspendisse tincidunt sit amet quam pharetra porttitor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas vel odio nibh. Suspendisse nec facilisis risus. Donec id pulvinar neque.
                             </p>
                         </div>
                     </article>
                 </div>
             </section>
-            <!--
-            <section class="jobs">
-                    <h1 class="jobs__title">Trabajos</h1>
+            <section class="jobs" id="jobs">
+            <h1 class="jobs__title">Trabajos</h1>
+            <p class="jobs__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Nam sollicitudin tempus suscipit. 
+                Morbi vitae lectus eu massa imperdiet mollis in vel tortor. 
+                Nullam nec luctus neque. Duis egestas dui et risus pretium, 
+                ut luctus est dignissim. Aliquam sed mi est. Etiam pellentesque vulputate 
+                nunc.
+            </p>
+            <div class="jobs__gallery_container">
+                <div class="jobs__gallery_item">
+                    <a class="example-image-link" href="images\uno.jpg" data-lightbox="example-set">
+                        <img src="images\uno.jpg" alt="imagen galeria"/>
+                    </a>
+                </div>
+                <div class="jobs__gallery_item">
+                    <a class="example-image-link" href="images\dos.jpg" data-lightbox="example-set">
+                        <img src="images\dos.jpg" alt="imagen galeria"/>
+                    </a>
+                </div>
+                <div class="jobs__gallery_item">
+                    <a class="example-image-link" href="images\tres.jpg" data-lightbox="example-set">
+                        <img src="images\tres.jpg" alt="imagen galeria"/>
+                    </a>
+                </div>
+                <div class="jobs__gallery_item">
+                    <a class="example-image-link" href="images\cuatro.jpg" data-lightbox="example-set">
+                        <img src="images\cuatro.jpg" alt="imagen galeria"/>
+                    </a>
+                </div>
+                <div class="jobs__gallery_item">
+                    <a class="example-image-link" href="images\cinco.jpg" data-lightbox="example-set">
+                        <img src="images\cinco.jpg" alt="imagen galeria"/>
+                    </a>
+                </div>
+                <div class="jobs__gallery_item">
+                    <a class="example-image-link" href="images\seis.jpg" data-lightbox="example-set">
+                        <img src="images\seis.jpg" alt="imagen galeria"/>
+                    </a>
+                </div>
+                <div class="jobs__gallery_item">
+                    <a class="example-image-link" href="images\siete.jpg" data-lightbox="example-set">
+                        <img src="images\siete.jpg" alt="imagen galeria"/>
+                    </a>
+                </div>
+                <div class="jobs__gallery_item">
+                    <a class="example-image-link" href="images\ocho.jpg" data-lightbox="example-set">
+                        <img src="images\ocho.jpg" alt="imagen galeria"/>
+                    </a>
+                </div>
+                <div class="jobs__gallery_item">
+                    <a class="example-image-link" href="images\nueve.jpg" data-lightbox="example-set">
+                        <img src="images\nueve.jpg" alt="imagen galeria"/>
+                    </a>
+                </div>
+                <div class="jobs__gallery_item">
+                    <a class="example-image-link" href="images\diez.jpg" data-lightbox="example-set">
+                        <img src="images\diez.jpg" alt="imagen galeria"/>
+                    </a>
+                </div>
+                <div class="jobs__gallery_item">
+                    <a class="example-image-link" href="images\once.jpg" data-lightbox="example-set">
+                        <img src="images\once.jpg" alt="imagen galeria"/>
+                    </a>
+                </div>
+                <div class="jobs__gallery_item">
+                    <a class="example-image-link" href="images\doce.jpg" data-lightbox="example-set">
+                        <img src="images\doce.jpg" alt="imagen galeria"/>
+                    </a>
+                </div>
+                <div class="jobs__gallery_item">
+                    <a class="example-image-link" href="images\trece.jpg" data-lightbox="example-set">
+                        <img src="images\trece.jpg" alt="imagen galeria"/>
+                    </a>
+                </div>
+                <div class="jobs__gallery_item">
+                    <a class="example-image-link" href="images\catorce.jpg" data-lightbox="example-set">
+                        <img src="images\catorce.jpg" alt="imagen galeria"/>
+                    </a>
+                </div>
+                <div class="jobs__gallery_item">
+                    <a class="example-image-link" href="images\quince.jpg" data-lightbox="example-set">
+                        <img src="images\quince.jpg" alt="imagen galeria"/>
+                    </a>
+                </div>
+                <div class="jobs__gallery_item">
+                    <a class="example-image-link" href="images\dieciseis.jpg" data-lightbox="example-set">
+                        <img src="images\dieciseis.jpg" alt="imagen galeria"/>
+                    </a>
+                </div>
+                <div class="jobs__gallery_item">
+                    <a class="example-image-link" href="images\diecisiete.jpg" data-lightbox="example-set">
+                        <img src="images\diecisiete.jpg" alt="imagen galeria"/>
+                    </a>
+                </div>
+                <div class="jobs__gallery_item">
+                    <a class="example-image-link" href="images\dieciocho.jpg" data-lightbox="example-set">
+                        <img src="images\dieciocho.jpg" alt="imagen galeria"/>
+                    </a>
+                </div>
+                </div>
             </section>
-        -->
+            <footer class="footer">
+                    <a href="https://www.josebamoreno.es" class="footer__email--color">© 2019 Joseba Moreno</a>   
+            </footer>
         </main>
-        
-        <script src="" async defer>
-        </script>
     </body>
 </html>
