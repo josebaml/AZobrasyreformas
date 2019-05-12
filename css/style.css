@@ -214,8 +214,8 @@ body {
     align-items: center;
     margin-top: 2em; }
   .jobs__gallery_item {
-    width: 85vw;
-    height: 75vw;
+    width: 95vw;
+    height: 85vw;
     border: 1px solid #fffefe;
     margin-bottom: 1em;
     align-self: center; }
@@ -284,8 +284,8 @@ body {
 
   .jobs__gallery_item {
     width: 47vw;
-    height: 40vw;
-    margin: 1em .5em; }
+    height: 45vw;
+    margin: .8em .5em; }
 
   .footer {
     font-size: 1em; } }
@@ -304,8 +304,10 @@ body {
   .jobs {
     min-height: 100vh; }
     .jobs__gallery_item {
-      width: 30vw;
-      height: 30vw;
-      margin: 1em .5em; } }
+      width: 31vw;
+      height: 31vw; } }
+@media screen and (min-width: 1500px) {
+  .jobs__gallery_item {
+    margin: .8em; } }
 
 /*# sourceMappingURL=style.css.map */
