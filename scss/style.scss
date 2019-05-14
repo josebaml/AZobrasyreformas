@@ -59,6 +59,8 @@ body {
   &__logo{
     color: $color_negro;
     margin-left: .5em;
+      width: 80px;
+      height: 55px;
   }
   &__ul{
     font-family: 'Roboto', sans-serif;
@@ -278,6 +280,10 @@ body {
 /**** Media Queries *****/
 @media screen and (min-width:600px) {
   .hero{
+    &__logo{
+      width: 100px;
+      height: 69px;
+    }
     &__button_nav--toggle{
       display: none;
     }
@@ -349,6 +355,10 @@ body {
   }
 }
 @media screen and (min-width:1000px) {
+  .hero__logo{
+    width: 120px;
+    height: 83px;
+  } 
   .services{
     min-height: 100vh;
     &__container{
@@ -371,7 +381,7 @@ body {
   }
 }
 @media screen and (min-width:1500px) {
-    .jobs__gallery_item{
+  .jobs__gallery_item{
       margin: .8em;
     }
 }
