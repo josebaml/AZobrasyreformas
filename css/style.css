@@ -12,6 +12,31 @@ body {
 .over_hidden {
   overflow: hidden; }
 
+.menu {
+  position: fixed;
+  bottom: 5%;
+  right: 1%;
+  font-size: 35px;
+  color: #F7F7F7;
+  transition: background-color .3s, opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden; }
+  .menu__top {
+    text-align: center;
+    display: block;
+    background-color: rgba(141, 186, 65, 0.9);
+    padding: .2em .4em;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    z-index: 1000; }
+
+.show {
+  opacity: 1;
+  visibility: visible; }
+
 /***** Hero section *****/
 .hero {
   background: url("../images/hero.jpg") no-repeat center;
@@ -157,7 +182,7 @@ body {
 /**** Services section****/
 .services {
   background-color: #EFEFEF;
-  padding-bottom: 3em; }
+  padding-bottom: 1em; }
   .services__title {
     font-family: 'Roboto', sans-serif;
     font-size: 2em;
@@ -166,7 +191,9 @@ body {
   .services__first_text {
     color: #767676;
     line-height: 1.6;
-    padding: 0 2.5em; }
+    padding: 0 2em; }
+  .services__container {
+    padding-top: 2em; }
   .services__article {
     background-color: #F7F7F7;
     margin-bottom: 1.5em; }
@@ -187,14 +214,14 @@ body {
       margin: 1em auto; }
   .services__text {
     color: #767676;
-    font-size: .8em;
+    font-size: .9em;
     padding: 0 1.5em;
     text-align: left; }
 
 /***** Jobs *****/
 .jobs {
   background-color: #EFEFEF;
-  padding-bottom: .5em; }
+  padding-bottom: 1em; }
   .jobs__title {
     font-family: 'Roboto', sans-serif;
     font-size: 2em;
@@ -203,7 +230,7 @@ body {
   .jobs__text {
     color: #767676;
     line-height: 1.6;
-    padding: 0 2.5em; }
+    padding: 0 2em; }
   .jobs__gallery_container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -257,14 +284,18 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 0 .5em; }
+    margin: 0 .5em;
+    padding-top: 2em; }
   .services__title {
     font-size: 2.3em; }
   .services__article {
     flex-grow: 0;
     flex-shrink: 1;
     flex-basis: calc(50% - .2em);
-    flex: 0 1 calc(50% - .2em); } }
+    flex: 0 1 calc(50% - .2em); }
+
+  .jobs__title {
+    font-size: 2.3em; } }
 @media screen and (min-width: 800px) {
   .hero__number_tel {
     margin-right: 2.8em; }
@@ -302,7 +333,8 @@ body {
   .services {
     min-height: 100vh; }
     .services__container {
-      margin-top: 3em; }
+      margin-top: 3em;
+      padding-top: 0; }
     .services__article {
       flex-grow: 0;
       flex-shrink: 1;
@@ -316,6 +348,9 @@ body {
       width: 31vw;
       height: 31vw; } }
 @media screen and (min-width: 1500px) {
+  .services__text {
+    font-size: 1em; }
+
   .jobs__gallery_item {
     margin: .8em; } }
 

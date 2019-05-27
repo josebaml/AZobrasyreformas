@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/lightbox.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="js/lightbox-plus-jquery.min.js"></script>
         <script>
@@ -39,6 +40,21 @@
                 scrollTop: $(strAncla).offset().top
                 },1000);
             });
+
+            /* botón ir arriba */
+            var btn = $('#button');
+
+            $(window).scroll(function() {
+                if ($(window).scrollTop() > 300) {
+                btn.addClass('show');
+                } else {
+                btn.removeClass('show');
+                }
+            });
+            btn.on('click', function(e) {
+                e.preventDefault();
+                $('html, body').animate({scrollTop:0}, '300');
+            });
         });
         </script>
     </head>
@@ -47,10 +63,15 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <main>
+            <div class="menu" id="button">
+                <a href="#" class="menu__top">
+                    <i class="fas fa-chevron-up"></i>
+                </a>
+            </div>
             <section class="hero" id="hero">
                 <header class="hero__header">
                         <div class="hero__telephone">
-                            <a class="hero__number_tel" href="tel:600123456">624848612</a>
+                            <a class="hero__number_tel" href="tel:610759629">610759629</a>
                         </div>
                         <nav class="hero__nav">
                             <h1 class="hero__logo"><a href="#hero"><img src="images/logo.png" alt="logo"/></a></h1>
@@ -70,9 +91,9 @@
                         <div class="sidenav">
                             <nav class="sidenav__wrap">
                                 <ul class="sidenav__ul">
-                                    <li class="sidenav__li"><a href="#" class="sidenav__a">Inicio</a></li>
-                                    <li class="sidenav__li"><a href="#" class="sidenav__a">Servicios</a></li>
-                                    <li class="sidenav__li"><a href="#" class="sidenav__a">Trabajos</a></li>
+                                    <li class="sidenav__li"><a href="#hero" class="sidenav__a">Inicio</a></li>
+                                    <li class="sidenav__li"><a href="#services" class="sidenav__a">Servicios</a></li>
+                                    <li class="sidenav__li"><a href="#jobs" class="sidenav__a">Trabajos</a></li>
                                 </ul>
                             </nav>
                         </div>
