@@ -18,7 +18,7 @@ body {
   right: 1%;
   font-size: 35px;
   color: #F7F7F7;
-  transition: background-color .3s, opacity .5s, visibility .5s;
+  transition: background-color .3s,  opacity .5s, visibility .5s;
   opacity: 0;
   visibility: hidden; }
   .menu__top {
@@ -56,16 +56,25 @@ body {
     padding: 1em 0;
     text-align: right; }
   .hero__number_tel {
-    background: url("../images/icono_telephone_3.svg") no-repeat left;
+    background: url("../images/icono_telephone.svg") no-repeat left;
     background-size: 1em;
     display: inline-block;
     font-family: 'Roboto', sans-serif;
     font-size: 1.5em;
+    margin-top: .6em;
     margin-right: .7em;
     padding-left: 1.3em;
     transition: color .3s ease-in-out; }
     .hero__number_tel:hover {
       color: #8dba41; }
+  .hero__gps {
+    background: url("../images/icono_gps.svg") no-repeat left;
+    background-size: 1em;
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+    margin-right: .7em;
+    padding-left: 1.3em; }
   .hero__nav {
     align-items: center;
     background-color: #F7F7F7;
@@ -264,6 +273,9 @@ body {
     color: #8dba41; }
 
 /**** Media Queries *****/
+@media screen and (min-width: 420px) {
+  .hero__number_tel {
+    margin-top: 0; } }
 @media screen and (min-width: 600px) {
   .hero__logo {
     width: 100px;
@@ -298,7 +310,8 @@ body {
     font-size: 2.3em; } }
 @media screen and (min-width: 800px) {
   .hero__number_tel {
-    margin-right: 2.8em; }
+    margin-right: 2.8em;
+    margin-top: 0; }
   .hero__logo {
     margin-left: 2.5em; }
   .hero__ul {

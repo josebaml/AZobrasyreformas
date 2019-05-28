@@ -61,17 +61,27 @@ body {
     text-align: right;
   }
   &__number_tel{
-    background: url("../images/icono_telephone_3.svg") no-repeat left;
+    background: url("../images/icono_telephone.svg") no-repeat left;
     background-size: 1em;
     display: inline-block;
     font-family: 'Roboto', sans-serif;
     font-size: 1.5em;
+    margin-top: .6em;
     margin-right: .7em;
     padding-left: 1.3em;
     transition: color .3s ease-in-out;
     &:hover{
       color: $color_verde;
     }
+  }
+  &__gps{
+    background: url("../images/icono_gps.svg") no-repeat left;
+    background-size: 1em;
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+    margin-right: .7em;
+    padding-left: 1.3em;
   }
   &__nav{
     align-items: center;
@@ -309,6 +319,13 @@ body {
 }
 
 /**** Media Queries *****/
+@media screen and (min-width:420px) {
+  .hero{
+    &__number_tel{
+      margin-top: 0;
+    }
+  }
+}
 @media screen and (min-width:600px) {
   .hero{
     &__logo{
@@ -356,6 +373,7 @@ body {
   .hero{
     &__number_tel{
       margin-right: 2.8em;
+      margin-top: 0;
     }
     &__logo{
       margin-left: 2.5em;

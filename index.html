@@ -32,6 +32,16 @@
                 scrollTop: $(strAncla).offset().top
                 },1000);
             });
+            $('.sidenav__a').click(function(e){     
+                e.preventDefault();   //evitar el eventos del enlace normal
+                var strAncla=$(this).attr('href'); //id del ancla
+                $('body,html').stop(true,true).animate({        
+                scrollTop: $(strAncla).offset().top
+                },1000);
+                $('.hero__button_nav--toggle').toggleClass('active');
+                $('.sidenav').toggleClass('sidenav__in');
+                $('body').toggleClass('over_hidden');
+            });
             /* Logo */
             $('.header__logo > a').click(function(e){       
                 e.preventDefault();   //evitar el eventos del enlace normal
@@ -71,6 +81,7 @@
             <section class="hero" id="hero">
                 <header class="hero__header">
                         <div class="hero__telephone">
+                            <span class="hero__gps">Portugalete (Bizkaia)</span>
                             <a class="hero__number_tel" href="tel:610759629">610759629</a>
                         </div>
                         <nav class="hero__nav">
@@ -103,7 +114,7 @@
             <section class="services" id="services">
                 <h1 class="services__title">Servicios</h1>
                 <p class="services__first_text">
-					Somos una empresa de Bizkaia especializada en la realización de todo tipo de reformas para viviendas, locales comerciales y comunidades de propietarios. 
+					Somos una empresa de Portugalete (Bizkaia), especializada en la realización de todo tipo de reformas para viviendas, locales comerciales y comunidades de propietarios. 
 Contamos con una dilatada experiencia en el sector para ofrecerle un exclusivo servicio responsable y de calidad. 
 Somos expertos en dar las mejores soluciones para su reforma.
                     </p>
@@ -157,7 +168,7 @@ así como las expectativas de calidad.
             <section class="jobs" id="jobs">
             <h1 class="jobs__title">Trabajos</h1>
             <p class="jobs__text">
-			Diferentes trabajos abalan nuestra dedicación y profesionalidad a lo largo de los años. Solicite presupuesto, contacte con AZ obras y reformas para sus reformas y rehabilitaciones en Bizkaia y alrededores, realizaremos un presupuesto ajustado a sus necesidades.
+			Diferentes trabajos abalan nuestra dedicación y profesionalidad a lo largo de los años. Solicite presupuesto, contacte con nosotros para sus reformas y rehabilitaciones en Bizkaia y alrededores, realizaremos un presupuesto ajustado a sus necesidades.
 				
             </p>
             <div class="jobs__gallery_container">
