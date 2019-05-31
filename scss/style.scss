@@ -205,6 +205,9 @@ body {
     font-size: 1.1em;
     margin-right: .5em;
   }
+  &__li:nth-child(1){
+    padding-top: 2em;
+  }
   &__li{
     border-bottom: 2px solid $color_verde;
     margin: .3em 1.6em;
@@ -324,6 +327,9 @@ body {
     &__number_tel{
       margin-top: 0;
     }
+  }
+  .sidenav__li:nth-child(1){
+    padding-top: 0;
   }
 }
 @media screen and (min-width:600px) {
